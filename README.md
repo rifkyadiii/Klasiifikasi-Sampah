@@ -111,22 +111,21 @@ Model yang telah dilatih (`best_model.keras`) akan di-deploy sebagai aplikasi we
 
 1.  Pastikan Anda telah menginstal Streamlit dan dependensi Python lainnya:
     ```bash
-    pip install streamlit tensorflow opencv-python-headless numpy pandas plotly pillow
+    pip install -r requirements.txt
     ```
 2.  Pastikan file model `best_model.keras` berada di direktori yang sama dengan skrip aplikasi Streamlit (`app.py` atau nama file `.py` Streamlit Anda).
 3.  Buka terminal atau command prompt, navigasikan ke direktori proyek Anda.
 4.  Jalankan aplikasi Streamlit dengan perintah:
     ```bash
-    streamlit run nama_file_aplikasi_anda.py
+    streamlit app.py
     ```
-    (Ganti `nama_file_aplikasi_anda.py` dengan nama file Python yang berisi kode Streamlit Anda.)
 5.  Aplikasi akan terbuka di browser web default Anda.
 
 ### Tautan Aplikasi (Deployment)
 
 Aplikasi Streamlit ini dapat diakses secara publik melalui tautan berikut:
 
-[**Tautan Aplikasi Streamlit**](https://www.google.com/search?q=https://share.streamlit.io/your-username/your-repo/your-app-name)
+[**Tautan Aplikasi Streamlit**](https://klasifikasi-sampah-ml.streamlit.app/)
 
 ## Kesimpulan
 
