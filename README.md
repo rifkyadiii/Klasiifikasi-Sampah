@@ -12,7 +12,7 @@ Dataset "Garbage Classification" diunduh dari Kaggle.
 
   * **Sumber:** [Garbage Classification Dataset](https://www.kaggle.com/datasets/mostafaabla/garbage-classification)
   * **Jumlah Kelas:** 12
-  * **Total Gambar:** Sekitar 25.000 gambar.
+  * **Total Gambar:** 15515 gambar.
 
 ### Struktur Dataset setelah Splitting
 
@@ -24,18 +24,21 @@ Dataset dibagi menjadi tiga set:
 
 Distribusi gambar per kelas:
 
-  * `battery`: 400 gambar (train), 133 (val), 133 (test)
-  * `biological`: 500 gambar (train), 166 (val), 166 (test)
-  * `brown-glass`: 400 gambar (train), 133 (val), 133 (test)
-  * `cardboard`: 400 gambar (train), 133 (val), 133 (test)
-  * `clothes`: 400 gambar (train), 133 (val), 133 (test)
-  * `green-glass`: 400 gambar (train), 133 (val), 133 (test)
-  * `metal`: 400 gambar (train), 133 (val), 133 (test)
-  * `paper`: 500 gambar (train), 166 (val), 166 (test)
-  * `plastic`: 500 gambar (train), 166 (val), 166 (test)
-  * `shoes`: 400 gambar (train), 133 (val), 133 (test)
-  * `trash`: 500 gambar (train), 166 (val), 166 (test)
-  * `white-glass`: 400 gambar (train), 133 (val), 133 (test)
+![image](https://github.com/user-attachments/assets/dba7cd52-b5f8-4b53-bdb5-79c85d7e2caa)
+
+  * `battery`: 400 gambar
+  * `Kelas metal`: 769 gambar
+  * `Kelas white-glass`: 775 gambar
+  * `Kelas biological`: 985 gambar
+  * `Kelas paper`: 1050 gambar
+  * `Kelas brown-glass`: 607 gambar
+  * `Kelas battery`: 945 gambar
+  * `Kelas trash`: 697 gambar
+  * `Kelas cardboard`: 891 gambar
+  * `Kelas shoes`: 1977 gambar
+  * `Kelas clothes`: 5325 gambar
+  * `Kelas plastic`: 865 gambar
+  * `Kelas green-glass`: 629 gambar
 
 ## Arsitektur Model
 
@@ -82,6 +85,8 @@ Berikut adalah ringkasan kinerja model setelah pelatihan:
   * **Loss Testing:** Nilai *loss* model pada data testing. Nilai rendah (\~0.1509) menunjukkan bahwa prediksi model sangat akurat dan memiliki kesalahan yang minimal pada data yang belum pernah dilihat.
 
 ### Visualisasi Hasil Training
+
+![image](https://github.com/user-attachments/assets/03969419-9683-4aef-b35f-f7ac43171f3e)
 
   * **Model Accuracy & Loss:** Grafik ini menunjukkan bagaimana akurasi dan loss berubah seiring dengan bertambahnya epoch, baik untuk data training maupun validasi. Konvergensi yang baik dengan *gap* yang kecil antara kedua kurva menunjukkan model belajar dengan baik dan tidak terlalu *overfit*.
   * **Accuracy Gap Analysis & Loss Gap Analysis:** Grafik ini memvisualisasikan perbedaan (gap) antara metrik training dan validasi. Gap yang kecil dan stabil di bawah ambang batas (garis putus-putus oranye dan merah) adalah indikator kuat bahwa strategi regulasi (dropout, L2, dll.) bekerja efektif dalam mencegah *overfitting*.
