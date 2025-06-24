@@ -1,18 +1,13 @@
 import streamlit as st
 import tensorflow as tf
 from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing import image
 import numpy as np
 from PIL import Image
-import io
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
 import cv2
-import base64
 from datetime import datetime
-import json
-import os
 
 # Konfigurasi halaman
 st.set_page_config(
