@@ -1,7 +1,7 @@
-numpy>=1.26.0
-opencv-python==4.5.5.64
-pandas==1.5.3
-Pillow>=7.1.0,<10
-plotly==5.18.0
-streamlit==1.25.0
-tensorflow==2.15.0
+numpy
+opencv-python
+pandas
+Pillow
+plotly
+streamlit
+tensorflow
