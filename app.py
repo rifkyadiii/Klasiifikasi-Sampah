@@ -395,7 +395,6 @@ def main():
                         <div class="prediction-result">
                             <h2>{class_info['icon']} {class_info['name']}</h2>
                             <h3>Confidence: {confidence*100:.1f}%</h3>
-                            <p>{class_info['description']}</p>
                         </div>
                         """, unsafe_allow_html=True)
                         
