@@ -3,7 +3,7 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 import numpy as np
 from PIL import Image
-import io
+from io import BytesIO
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
@@ -372,9 +372,14 @@ def main():
         image_source = camera_image if camera_image is not None else uploaded_file
         
         if image_source is not None:
-            # Tampilkan gambar
-            image = Image.open(image_source)
-            st.image(image, caption="Gambar yang Diunggah", use_container_width=True)
+            try:
+                image_bytes = image_source.getvalue()
+                image = Image.open(BytesIO(image_bytes)).convert("RGB")
+                st.image(image, caption="Gambar yang Diunggah")
+            except Exception as e:
+                st.error(f"Terjadi kesalahan saat membaca gambar: {type(e).__name__} - {e}")
+                image = None
+
             
             # Tombol prediksi
             if st.button("🔍 Analisis Gambar", type="primary"):
